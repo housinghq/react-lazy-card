@@ -1,85 +1,34 @@
-#react-photostory
+#react-lazy-slide
 
 > A lightweight carousel made in React and optimized for mobile.
 
-[![codecov](https://codecov.io/gh/housinghq/react-photostory/branch/master/graph/badge.svg)](https://codecov.io/gh/housinghq/react-photostory)
-[![Build Status](https://travis-ci.org/housinghq/react-photostory.svg?branch=master)](https://travis-ci.org/housinghq/react-photostory)
-[![npm](https://img.shields.io/npm/v/react-photostory.svg?maxAge=2592000)](https://github.com/housinghq/react-photostory)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/housinghq/react-photostory/master/LICENSE.md)
-
-<p align="center"><img src="demo.gif" width="400"/></p>
+[![codecov](https://codecov.io/gh/housinghq/react-lazy-slide/branch/master/graph/badge.svg)](https://codecov.io/gh/housinghq/react-lazy-slide)
+[![Build Status](https://travis-ci.org/housinghq/react-lazy-slide.svg?branch=master)](https://travis-ci.org/housinghq/react-lazy-slide)
+[![npm](https://img.shields.io/npm/v/react-lazy-slide.svg?maxAge=2592000)](https://github.com/housinghq/react-lazy-slide)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/housinghq/react-lazy-slide/master/LICENSE.md)
 
 
 
-Demo is available [here](https://housinghq.github.io/react-photostory). Make sure devtools is
-open and mobile emulation is selected as this library currently only supports touch events.
-
-##Features
-
-1. lazy-loading by default
-1. AutoPlay
-1. Drag and swipe
+Demo is available [here](https://housinghq.github.io/react-lazy-slide).
 
 ## Installation
 ```
-npm install --save react-photostory
+npm install --save react-lazy-slide
 ```
 
 ## Basic Usage
 **JSX**:
 ```js
-import { Slide, Swipe } from 'react-photostory';
+import Slide from 'react-lazy-slide';
 
-<Swipe className="photostory">
-    <Slide image="a.jpg" defaultImage="default1.jpg">Text 1</Slide>
-    <Slide image="b.jpg" defaultimage="default2.jpg">Text 2</Slide>
-</Swipe>
+<Slide image="b.jpg" autoLoad={true} defaultimage="default2.jpg">Text 2</Slide>
 ```
 **CSS**
 ```css
-@import "react-photostory/dist/swipe" // contains CSS of Slide
-
-/*
-In case you wan't to only use the Slide component
-as an image lazy loading component, just import
-the CSS for slide
-*/
-@import "react-photostory/dist/slide"
+@import "react-lazy-slide/dist/slide"
 ```
 
 ## Options
-
-### &lt;Swipe/&gt; Component
-
-prop|default|description
-----|-------|-----------
-className|''|Custom classname
-initialIndex|0|initially visible slide index
-autoPlay|false|whether to display slide show or not
-overScan|0|Number of Slide offsets to load excluding the current slide.If its 1 it will load current, current+-1
-onSwipe|({initialIndex, currentIndex})| function executed whenever the current slide changes
-onClick|{index}|function executed when a slide is clicked
-prev|&lt;button&gt;PREV&lt;/button&gt;|React element to replace the PREV button
-next|&lt;button&gt;NEXT&lt;/button&gt;|React element to replace the NEXT button
-threshold|0.5|Ratio of carousel width one should drag to make successful swipe
-responsive|false|whether or not to listen to window resize event
-
-#### .gotoSlide(i)
-To manually go to a particular slide you can use `gotoSlide(i)` method
-
-```js
-const x = (
-<Swipe className="photostory">
-    <Slide image="a.jpg" defaultImage="default1.jpg">Text 1</Slide>
-    <Slide image="b.jpg" defaultimage="default2.jpg">Text 2</Slide>
-    <Slide image="c.jpg" defaultimage="default3.jpg">Text 2</Slide>
-</Swipe>
-)
-
-x.gotoSlide(2) // will go to the 3rd slide
-```
-
-### &lt;Slide/&gt; Component
 
 prop|default|description
 ----|-------|-----
@@ -106,12 +55,11 @@ a.load() // now image will be loaded
 
 ### Development
 ```
-git clone https://github.com/housinghq/react-photostory
-cd react-photostory
+git clone https://github.com/housinghq/react-lazy-slide
+cd react-lazy-slide
 npm install
 npm run storybook
 ```
-Make sure you develop in emulation mode (open devtools and select mobile emulation). Currently this only supports touch events.
 
 Open an issue before opening a PR. This package is optimised for mobile so its hard to include all the features.
 

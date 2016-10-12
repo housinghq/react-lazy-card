@@ -1,6 +1,6 @@
 {
   "name": "react-lazy-slide",
-  "description": "A mobile optimised lighweight image loading component written in React",
+  "description": "A lighweight image lazy-loading component written in React",
   "main": "dist/index.j",
   "jsnext:main": "components/index.js",
   "module": "components/index.js",
