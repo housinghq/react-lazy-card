@@ -1,37 +1,37 @@
-#react-caard
+#react-lazy-card
 
 > A lightweight carousel made in React and optimized for mobile.
 
-[![codecov](https://codecov.io/gh/housinghq/react-caard/branch/master/graph/badge.svg)](https://codecov.io/gh/housinghq/react-caard)
-[![Build Status](https://travis-ci.org/housinghq/react-caard.svg?branch=master)](https://travis-ci.org/housinghq/react-caard)
-[![npm](https://img.shields.io/npm/v/react-caard.svg?maxAge=2592000)](https://github.com/housinghq/react-caard)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/housinghq/react-caard/master/LICENSE.md)
+[![codecov](https://codecov.io/gh/housinghq/react-lazy-card/branch/master/graph/badge.svg)](https://codecov.io/gh/housinghq/react-lazy-card)
+[![Build Status](https://travis-ci.org/housinghq/react-lazy-card.svg?branch=master)](https://travis-ci.org/housinghq/react-lazy-card)
+[![npm](https://img.shields.io/npm/v/react-lazy-card.svg?maxAge=2592000)](https://github.com/housinghq/react-lazy-card)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/housinghq/react-lazy-card/master/LICENSE.md)
 
 
-Demo is available [here](https://housinghq.github.io/react-caard).
+Demo is available [here](https://housinghq.github.io/react-lazy-card).
 
 ## Installation
 ```
-npm install --save react-caard
+npm install --save react-lazy-card
 ```
 
 ## Basic Usage
 **JSX**:
 ```js
-import Caard from 'react-caard';
+import lazy-card from 'react-lazy-card';
 
-<Caard image="b.jpg" autoLoad={true} defaultimage="default2.jpg">Text 2</Caard>
+<LazyCard image="b.jpg" autoLoad={true} defaultimage="default2.jpg">Text 2</LazyCard>
 ```
 **CSS**
 ```css
-@import "react-caard/dist/slide"
+@import "react-lazy-card/dist/slide"
 ```
 
 ## Options
 
 prop|default|description
 ----|-------|-----
-className|string|custom classname for Caard component
+className|string|custom classname for lazy-card component
 image|string|final image to be loaded
 defaultImage|string|pre-loader image to be shown
 autoLoad|false|should the component automatically lazyLoad the image
@@ -44,18 +44,18 @@ If `autoload` is set to false the you have to manually call `.load()` to load th
 
 ```js
 // This will not load `image` automatically. Will load default1.jpg
-const a = <Caard image="a.jpg" defaultImage="default1.jpg">Text 1</Caard>
+const a = <LazyCard image="a.jpg" defaultImage="default1.jpg">Text 1</LazyCard>
 a.load() // now image will be loaded
 
 // Alternatively set `autoLoad` to true. So `a.jpg` will automatically replace
 // default1.jpg when it is loaded.
-<Caard image="a.jpg" defaultImage="default1.jpg" autoLoad={true}>Text 1</Caard>
+<LazyCard image="a.jpg" defaultImage="default1.jpg" autoLoad={true}>Text 1</LazyCard>
 ```
 
 ### Development
 ```
-git clone https://github.com/housinghq/react-caard
-cd react-caard
+git clone https://github.com/housinghq/react-lazy-card
+cd react-lazy-card
 npm install
 npm run storybook
 ```
