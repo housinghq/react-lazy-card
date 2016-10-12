@@ -1,6 +1,6 @@
 #react-lazy-card
 
-> A lightweight carousel made in React and optimized for mobile.
+> A lighweight image lazy-loading component written in React
 
 [![codecov](https://codecov.io/gh/housinghq/react-lazy-card/branch/master/graph/badge.svg)](https://codecov.io/gh/housinghq/react-lazy-card)
 [![Build Status](https://travis-ci.org/housinghq/react-lazy-card.svg?branch=master)](https://travis-ci.org/housinghq/react-lazy-card)
