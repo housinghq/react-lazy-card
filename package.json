@@ -1,6 +1,6 @@
 {
-  "name": "react-photostory",
-  "description": "A mobile optimised lighweight gallery component written in React",
+  "name": "react-lazy-slide",
+  "description": "A mobile optimised lighweight image loading component written in React",
   "main": "dist/index.j",
   "jsnext:main": "components/index.js",
   "module": "components/index.js",
@@ -30,18 +30,22 @@
   },
   "keywords": [
     "react-swipe",
-    "react-photostory"
+    "react-photostory",
+    "react-lazy-slide",
+    "lazy-load",
+    "lazy-image",
+    "image"
   ],
   "author": "Ritesh Kumar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/housinghq/react-photostory/issues"
+    "url": "https://github.com/housinghq/react-lazy-slide/issues"
   },
-  "homepage": "https://github.com/housinghq/react-photostory",
+  "homepage": "https://github.com/housinghq/react-lazy-slide",
   "devDependencies": {
+    "@kadira/react-storybook-decorator-centered": "^1.0.0",
     "@kadira/storybook": "^2.24.0",
     "@kadira/storybook-addon-actions": "^1.1.1",
-    "@kadira/storybook-addon-knobs": "^1.3.0",
     "@kadira/storybook-addon-options": "^1.0.1",
     "autoprefixer": "^6.4.1",
     "babel-cli": "^6.16.0",

@@ -1,21 +1,24 @@
-import { configure } from '@kadira/storybook';
+import { configure, addDecorator } from '@kadira/storybook';
 import { setOptions } from '@kadira/storybook-addon-options';
+import centered from '@kadira/react-storybook-decorator-centered';
 
-import '../components/swipe.scss'
+addDecorator(centered)
+
+import '../components/slide.scss'
 import './custom.scss'
 
 setOptions({
-  name: 'REACT-PHOTOSTORY',
-  url: 'https://github.com/housinghq/react-photostory',
+  name: 'REACT-LAZY-SLIDE',
+  url: 'https://github.com/housinghq/react-lazy-slide',
   goFullScreen: false,
-  showLeftPanel: false,
+  showLeftPanel: true,
   showDownPanel: true,
   showSearchBox: false,
   downPanelInRight: false,
 });
 
 function loadStories () {
-  require('../stories/Swipe.story.js');
+  require('../stories/Slide.story.js');
 }
 
 configure(loadStories, module);

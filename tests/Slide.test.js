@@ -4,7 +4,7 @@ import { shallow, mount } from 'enzyme'
 import sinon from 'sinon'
 const {describe, it} = global
 
-import { Slide } from '../components'
+import Slide from '../components'
 
 describe('Slide Component', () => {
   it('should set the defaultImage as background if provided', () => {
