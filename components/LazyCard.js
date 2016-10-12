@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 import autoBind from 'react-auto-bind'
 
-export default class Slide extends Component {
+export default class Caard extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -59,7 +59,7 @@ export default class Slide extends Component {
   }
 }
 
-Slide.propTypes = {
+Caard.propTypes = {
   className: PropTypes.string,
 
   // additional attributes for the root node
@@ -88,7 +88,7 @@ Slide.propTypes = {
   ])
 }
 
-Slide.defaultProps = {
+Caard.defaultProps = {
   title: '',
   attributes: {},
   autoLoad: false,

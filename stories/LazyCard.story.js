@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 
-import Slide from '../components';
+import LazyCard from '../components';
 
 const stories = storiesOf('App', module)
 
@@ -18,7 +18,7 @@ class Manual extends React.Component{
   render() {
     return (
       <div>
-        <Slide
+        <LazyCard
           ref="slide"
           defaultImage={defaultImage}
           image='https://is1-2.housingcdn.com/afe3f526/1264f1fbf64cb1d23dfaa3beb33ff0ef/v2/medium.jpg'
@@ -31,7 +31,7 @@ class Manual extends React.Component{
 
 stories
   .add('Automatic lazy-load', () => (
-    <Slide defaultImage={defaultImage} autoLoad={true}
+    <LazyCard defaultImage={defaultImage} autoLoad={true}
            image='https://is1-2.housingcdn.com/afe3f526/1264f1fbf64cb1d23dfaa3beb33ff0ef/v2/medium.jpg'/>
   ))
   .add('Manual lazy-load', () => {
@@ -40,11 +40,11 @@ stories
     )
   })
   .add('With HTML content', () => (
-    <Slide
+    <LazyCard
       defaultImage={defaultImage}
       autoLoad={true}
       image='https://is1-2.housingcdn.com/afe3f526/1264f1fbf64cb1d23dfaa3beb33ff0ef/v2/medium.jpg'
     >
       <div className="content">I AM A CHILD</div>
-    </Slide>
+    </LazyCard>
   ))

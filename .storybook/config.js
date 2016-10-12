@@ -4,7 +4,7 @@ import centered from '@kadira/react-storybook-decorator-centered';
 
 addDecorator(centered)
 
-import '../components/slide.scss'
+import '../components/lazyCard.scss'
 import './custom.scss'
 
 setOptions({
@@ -18,7 +18,7 @@ setOptions({
 });
 
 function loadStories () {
-  require('../stories/Slide.story.js');
+  require('../stories/LazyCard.story.js');
 }
 
 configure(loadStories, module);

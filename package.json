@@ -1,5 +1,5 @@
 {
-  "name": "react-lazy-slide",
+  "name": "react-lazy-card",
   "description": "A lighweight image lazy-loading component written in React",
   "main": "dist/index.j",
   "jsnext:main": "components/index.js",
@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/housinghq/react-photostory"
+    "url": "https://github.com/housinghq/react-lazy-card"
   },
   "keywords": [
     "react-swipe",
     "react-photostory",
-    "react-lazy-slide",
+    "react-lazy-card",
     "lazy-load",
     "lazy-image",
     "image"
@@ -39,9 +39,9 @@
   "author": "Ritesh Kumar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/housinghq/react-lazy-slide/issues"
+    "url": "https://github.com/housinghq/react-lazy-card/issues"
   },
-  "homepage": "https://github.com/housinghq/react-lazy-slide",
+  "homepage": "https://github.com/housinghq/react-lazy-card",
   "devDependencies": {
     "@kadira/react-storybook-decorator-centered": "^1.0.0",
     "@kadira/storybook": "^2.24.0",

@@ -1,3 +1,3 @@
-import Slide from './Slide'
+import LazyCard from './LazyCard'
 
-export default Slide
+export default LazyCard

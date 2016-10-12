@@ -4,12 +4,12 @@ import { shallow, mount } from 'enzyme'
 import sinon from 'sinon'
 const {describe, it} = global
 
-import Slide from '../components'
+import LazyCard from '../components'
 
-describe('Slide Component', () => {
+describe('LazyCard Component', () => {
   it('should set the defaultImage as background if provided', () => {
     const wrapper = shallow(
-      <Slide image={'a.jpg'} defaultImage={'b.jpg'}/>
+      <LazyCard image={'a.jpg'} defaultImage={'b.jpg'}/>
     )
 
     expect(wrapper.find('.rs-img').get(0).props.style.backgroundImage).to.equal('url(\'b.jpg\')')
@@ -17,7 +17,7 @@ describe('Slide Component', () => {
 
   it('should set image as background if defaultImage is not provided', () => {
     const wrapper = shallow(
-      <Slide image={'a.jpg'} lazyLoad={false}/>
+      <LazyCard image={'a.jpg'} lazyLoad={false}/>
     )
 
     expect(wrapper.find('.rs-img').get(0).props.style.backgroundImage).to.equal('url(\'a.jpg\')')
@@ -25,7 +25,7 @@ describe('Slide Component', () => {
 
   it('should load `image` when .load() is called', () => {
     const wrapper = mount(
-      <Slide
+      <LazyCard
         image='a.jpg'
         defaultImage={'b.jpg'}
       />
@@ -42,7 +42,7 @@ describe('Slide Component', () => {
 
   it('should set width when the width is passed', () => {
     const wrapper = shallow(
-      <Slide
+      <LazyCard
         image='a.jpg'
         defaultImage={'b.jpg'}
       />
@@ -58,13 +58,13 @@ describe('Slide Component', () => {
   it('should render children when they are passed', () => {
     const child = <div className="child">Hello World</div>
     const wrapper = shallow(
-      <Slide
+      <LazyCard
         image='a.jpg'
         defaultImage={'b.jpg'}
         index={6}
       >
         {child}
-      </Slide>
+      </LazyCard>
     )
 
     expect(wrapper.contains(child)).to.equal(true)
