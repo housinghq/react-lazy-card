@@ -1,7 +1,7 @@
 {
   "name": "react-lazy-card",
   "description": "A lighweight image lazy-loading component written in React",
-  "main": "dist/index.j",
+  "main": "dist/index.js",
   "jsnext:main": "components/index.js",
   "module": "components/index.js",
   "files": [
