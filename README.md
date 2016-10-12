@@ -7,6 +7,7 @@
 [![npm](https://img.shields.io/npm/v/react-lazy-card.svg?maxAge=2592000)](https://github.com/housinghq/react-lazy-card)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/housinghq/react-lazy-card/master/LICENSE.md)
 
+It supports both manual and automatic image lazy-loading.
 
 Demo is available [here](https://housinghq.github.io/react-lazy-card).
 
