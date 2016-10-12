@@ -8,8 +8,8 @@ import '../components/lazyCard.scss'
 import './custom.scss'
 
 setOptions({
-  name: 'REACT-LAZY-SLIDE',
-  url: 'https://github.com/housinghq/react-lazy-slide',
+  name: 'REACT-LAZY-CARD',
+  url: 'https://github.com/housinghq/react-lazy-card',
   goFullScreen: false,
   showLeftPanel: true,
   showDownPanel: true,
