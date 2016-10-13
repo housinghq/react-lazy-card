@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 import autoBind from 'react-auto-bind'
 
-export default class Caard extends Component {
+export default class LazyCard extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -59,7 +59,7 @@ export default class Caard extends Component {
   }
 }
 
-Caard.propTypes = {
+LazyCard.propTypes = {
   className: PropTypes.string,
 
   // additional attributes for the root node
@@ -72,7 +72,7 @@ Caard.propTypes = {
   width: PropTypes.number,
 
   // url of the main image
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
 
   // url of pre loaded image
   defaultImage: PropTypes.string,
@@ -88,7 +88,7 @@ Caard.propTypes = {
   ])
 }
 
-Caard.defaultProps = {
+LazyCard.defaultProps = {
   title: '',
   attributes: {},
   autoLoad: false,
