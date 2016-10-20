@@ -80,6 +80,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "react": "^15.x.x",
+    "react-addons-shallow-compare": "^15.3.2",
     "react-auto-bind": "^0.2.0"
   },
   "config": {

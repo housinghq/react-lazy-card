@@ -69,4 +69,29 @@ describe('LazyCard Component', () => {
 
     expect(wrapper.contains(child)).to.equal(true)
   })
+
+  it('should not re-render if the props are same', () => {
+    const render = sinon.spy(LazyCard.prototype, 'render')
+
+    const wrapper = shallow(
+      <LazyCard
+        image='a.jpg'
+        defaultImage='b.jpg'
+      />
+    )
+
+    expect(render.calledOnce).to.equal(true)
+
+    wrapper.setProps({
+      image: 'a.jpg'
+    })
+
+    expect(render.calledTwice).to.equal(false)
+
+    wrapper.setProps({
+      defaultImage: 'c.jpg'
+    })
+
+    expect(render.calledTwice).to.equal(true)
+  })
 })
