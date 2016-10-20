@@ -1,13 +1,13 @@
 import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 import autoBind from 'react-auto-bind'
+import shallowCompare from 'react-addons-shallow-compare'
 
 export default class LazyCard extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      image: props.lazyLoad ? props.defaultImage : (props.defaultImage || props.image),
-      width: 0
+      image: props.lazyLoad ? props.defaultImage : (props.defaultImage || props.image)
     }
 
     autoBind(this)
@@ -17,10 +17,8 @@ export default class LazyCard extends Component {
     if (this.props.autoLoad) this.load()
   }
 
-  componentWillReceiveProps (nextProps) {
-    this.setState({
-      width: nextProps.width
-    })
+  shouldComponentUpdate (nextProps, nextState) {
+    return shallowCompare(this, nextProps, nextState)
   }
 
   load () {
@@ -68,17 +66,18 @@ LazyCard.propTypes = {
   // should the component automatically lazy Load
   autoLoad: PropTypes.bool,
 
-  // width of slide
+  // width of slide component
   width: PropTypes.number,
 
   // url of the main image
   image: PropTypes.string,
 
-  // url of pre loaded image
+  // url of placeholder image
   defaultImage: PropTypes.string,
 
   // title for the image
   // serves similar to alt attribute for image
+  // only for the purpose of SEO
   title: PropTypes.string,
 
   lazyLoad: PropTypes.bool,
