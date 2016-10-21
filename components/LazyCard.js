@@ -4,8 +4,8 @@ import autoBind from 'react-auto-bind'
 import shallowCompare from 'react-addons-shallow-compare'
 
 export default class LazyCard extends Component {
-  constructor (props) {
-    super(props)
+  constructor (props, context) {
+    super(props, context)
     this.state = {
       image: props.lazyLoad ? props.defaultImage : (props.defaultImage || props.image)
     }
