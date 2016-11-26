@@ -80,6 +80,8 @@ LazyCard.propTypes = {
   // only for the purpose of SEO
   title: PropTypes.string,
 
+  subTitle: PropTypes.string,
+
   lazyLoad: PropTypes.bool,
 
   children: PropTypes.oneOfType([
