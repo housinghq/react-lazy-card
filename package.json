@@ -72,6 +72,7 @@
     "mocha": "^3.1.0",
     "node-sass": "^3.10.1",
     "react-addons-test-utils": "^15.3.2",
+    "react-dom": "^15.4.1",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.2",
     "semantic-release": "^4.3.5",
@@ -80,7 +81,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "react": "^15.x.x",
-    "react-addons-shallow-compare": "^15.3.2",
+    "react-addons-shallow-compare": "^15.x.x",
     "react-auto-bind": "^0.2.0"
   },
   "config": {
