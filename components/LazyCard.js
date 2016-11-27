@@ -84,6 +84,8 @@ LazyCard.propTypes = {
 
   lazyLoad: PropTypes.bool,
 
+  data: PropTypes.object,
+
   children: PropTypes.oneOfType([
     PropTypes.array, PropTypes.object
   ])
