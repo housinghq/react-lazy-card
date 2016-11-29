@@ -95,5 +95,6 @@ LazyCard.defaultProps = {
   title: '',
   attributes: {},
   autoLoad: false,
-  lazyLoad: true
+  lazyLoad: true,
+  data: {}
 }
