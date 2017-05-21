@@ -17,6 +17,13 @@ export default class LazyCard extends Component {
     if (this.props.autoLoad) this.load()
   }
 
+  componentWillUnmount () {
+    if (this.img) {
+      this.img.onload = null
+      this.img = null
+    }
+  }
+
   shouldComponentUpdate (nextProps, nextState) {
     return shallowCompare(this, nextProps, nextState)
   }
@@ -24,13 +31,14 @@ export default class LazyCard extends Component {
   load () {
     const {image} = this.props
     if (image && this.state.image !== image) {
-      const img = new Image()
-      img.src = image
+      const img = this.img = new Image()
       img.onload = () => {
         this.setState({
           image
         })
       }
+      img.src = image
+      if (img.complete) img.onload()
     }
   }
 
