@@ -1,9 +1,9 @@
-import React, { Component, PropTypes } from 'react'
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import autoBind from 'react-auto-bind'
-import shallowCompare from 'react-addons-shallow-compare'
 
-export default class LazyCard extends Component {
+export default class LazyCard extends PureComponent {
   constructor (props, context) {
     super(props, context)
     this.state = {
@@ -22,10 +22,6 @@ export default class LazyCard extends Component {
       this.img.onload = null
       this.img = null
     }
-  }
-
-  shouldComponentUpdate (nextProps, nextState) {
-    return shallowCompare(this, nextProps, nextState)
   }
 
   load () {
