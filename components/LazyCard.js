@@ -17,16 +17,24 @@ export default class LazyCard extends PureComponent {
     if (this.props.autoLoad) this.load()
   }
 
+  componentWillUnmount () {
+    if (this.img) {
+      this.img.onload = null
+      this.img = null
+    }
+  }
+
   load () {
     const {image} = this.props
     if (image && this.state.image !== image) {
-      const img = new Image()
-      img.src = image
+      const img = this.img = new Image()
       img.onload = () => {
         this.setState({
           image
         })
       }
+      img.src = image
+      if (img.complete) img.onload()
     }
   }
 
