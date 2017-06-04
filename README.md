@@ -1,4 +1,4 @@
-#react-lazy-card
+# react-lazy-card
 
 > A lighweight image lazy-loading component written in React
 
