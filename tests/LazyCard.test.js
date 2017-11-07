@@ -77,7 +77,7 @@ describe('LazyCard Component', () => {
   it('should not re-render if the props are same', () => {
     const render = sinon.spy(LazyCard.prototype, 'render')
 
-    const wrapper = shallow(
+    const wrapper = mount(
       <LazyCard
         image='a.jpg'
         defaultImage='b.jpg'
