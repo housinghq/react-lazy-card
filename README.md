@@ -21,7 +21,7 @@ npm install --save react-lazy-card
 ```js
 import LazyCard from 'react-lazy-card';
 
-<LazyCard image="b.jpg" autoLoad={true} defaultimage="default2.jpg">Text 2</LazyCard>
+<LazyCard image="b.jpg" autoLoad={true} defaultImage="default2.jpg">Text 2</LazyCard>
 ```
 **CSS**
 ```css
