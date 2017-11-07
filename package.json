@@ -1,5 +1,6 @@
 {
   "name": "react-lazy-card",
+  "version": "0.1.8",
   "description": "A lighweight image lazy-loading component written in React",
   "main": "dist/index.js",
   "jsnext:main": "components/index.js",
@@ -57,7 +58,8 @@
     "codecov.io": "^0.1.6",
     "commitizen": "^2.8.6",
     "cz-conventional-changelog": "^2.0.0",
-    "enzyme": "^2.4.1",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.0.4",
     "eslint": "^3.7.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-react": "^5.0.0",
@@ -73,8 +75,7 @@
     "jsdom": "9.6.0",
     "mocha": "^3.1.0",
     "node-sass": "^4.5.3",
-    "react-addons-test-utils": "^15.3.2",
-    "react-dom": "^15.4.1",
+    "react-dom": "^15.4.1 || ^16.0.0",
     "rimraf": "^2.5.4",
     "sass-loader": "^6.0.5",
     "semantic-release": "^6.3.6",
@@ -83,7 +84,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.10",
-    "react": "^15.x.x",
+    "react": "^15.x.x || ^16.0.0",
     "react-auto-bind": "^0.3.0"
   },
   "config": {

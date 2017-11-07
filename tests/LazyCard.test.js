@@ -1,7 +1,11 @@
 import React from 'react'
 import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
+import { configure, shallow, mount } from 'enzyme'
 import sinon from 'sinon'
+import Adapter from 'enzyme-adapter-react-16'
+
+configure({ adapter: new Adapter() })
+
 const {describe, it} = global
 
 import LazyCard from '../components'
@@ -73,7 +77,7 @@ describe('LazyCard Component', () => {
   it('should not re-render if the props are same', () => {
     const render = sinon.spy(LazyCard.prototype, 'render')
 
-    const wrapper = shallow(
+    const wrapper = mount(
       <LazyCard
         image='a.jpg'
         defaultImage='b.jpg'
